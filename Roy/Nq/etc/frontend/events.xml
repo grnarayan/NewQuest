@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_cart_add_product_complete">
+        <observer name="alphonso_customer_add_product_to_quote" instance="Roy\Nq\Observer\CustomerAddToQuote" />
+    </event>
+    <event name="checkout_cart_product_add_before">
+        <observer name="alphonso_customer_add_product_to_cart_before" instance="Roy\Nq\Observer\ForceCustomerLogin" />
+    </event>
+</config>
