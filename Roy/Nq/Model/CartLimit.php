@@ -22,6 +22,9 @@ class CartLimit implements CartLimitInterface
         $this->scopeConfig = $scopeConfig;
     }
 
+    /**
+     * @return int
+     */
     public function getLimit()
     {
         return $this->scopeConfig->getValue(self::XML_PATH_ALPHONOSO_PRODUCT_LIMIT);
