@@ -5,7 +5,7 @@ Magento module for Alphonso Toys
 # Configuration
 Maximum number of items that can be purchased within a 30 day period setting can be specified at :
 
-**~~Stores > Configuration > General > Alphonso Store Setting > Product Limit**~~
+**Stores > Configuration > General > Alphonso Store Setting > Product Limit**
 
 
 
