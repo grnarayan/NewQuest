@@ -9,7 +9,7 @@
 
     <!-- Product Service -->
     <route url="/alphonso/toys/cartlimit" method="GET">
-        <service class="Roy\Nq\Api\CartLimitInterface" method="getList"/>
+        <service class="Roy\Nq\Api\CartLimitInterface" method="getLimit"/>
         <resources>
             <resource ref="Magento_Catalog::products" />
         </resources>
