@@ -61,7 +61,9 @@ class CustomerCheckout implements ObserverInterface
         $cartLimit = $objectManager->get('Roy\Nq\Model\CartLimit');
         $customerOrderedItems = $cartLimit->getCustomerOrderedItems($customerId);
 
-        $storeProductLimit = $this->scopeConfig->getValue('alphonso_store_setting/general/productlimit', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        // Default value of 3 if value not specified
+        $storeProductLimit = $this->scopeConfig->getValue('alphonso_store_setting/general/productlimit', \Magento\Store\Model\ScopeInterface::SCOPE_STORE) ?
+            $this->scopeConfig->getValue('alphonso_store_setting/general/productlimit', \Magento\Store\Model\ScopeInterface::SCOPE_STORE) : 3;
 
         if (($customerOrderedItems + $cartItemCount) > $storeProductLimit) {
             $this->messageManager->addErrorMessage(
