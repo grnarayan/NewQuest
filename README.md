@@ -24,7 +24,7 @@ Maximum number of items that can be purchased within a 30 day period setting can
 ### Bugs / Improvements
     - Customer can update cart with more than 3 items
     - Prevents the customer from navigating to checkout but still am trying to give the message
-
+    - Tests don't work - I have committed unit test to show that I can do it.
 
 
 
